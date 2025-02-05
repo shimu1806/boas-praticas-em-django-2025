@@ -1,0 +1,42 @@
+{% load static %}
+<section class="contact_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Contatti Noi
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <form>
+            <div>
+              <input type="text" placeholder="Nome" name="name" id="name" required />
+            </div>
+            <div>
+              <input type="text" placeholder="Numero di telefono" name="phone" id="phone" required />
+            </div>
+            <div>
+              <input type="email" placeholder="Email" name="email" id="email" required />
+            </div>
+            <div>
+              <input type="text" class="message-box" placeholder="Messaggio" name="message" id="message" required />
+            </div>
+            
+           <div class="g-recaptcha" data-sitekey="6LehccoqAAAAAJvnQ-JoJB7A4iOcc6ToyMLosbVQ"></div>
+            <div class="d-flex ">
+            <button type="submit" onclick="sendEmail()">
+              Inviare
+            </button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div class="map_container">
+            <div class="map">
+              <div id="googleMap" style="width:100%;height:100%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

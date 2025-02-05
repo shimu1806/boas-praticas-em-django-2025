@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="IT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'learnCasttelinaEv1/css/extends.css'%} ">
+    <link rel="shortcut icon" type="imagex/png" href="./assets/icon.ico">
+    <title>La Casa di Garibaldi</title>
+    <!-- font awesome style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ll_css/font-awesome.min.css'% }" />
+      <!-- slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  {% include 'learnCastellinaEv1/partials/_header.html' %}
+  {% block content %}
+  {% endblock %}
+</body>
+  {% include 'learnCastellinaEv1/partials/_footer.html' %}
+</html>
+

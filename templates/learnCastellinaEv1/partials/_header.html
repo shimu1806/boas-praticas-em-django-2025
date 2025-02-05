@@ -1,0 +1,57 @@
+{% load static %}
+<div class="hero_area">
+  <!-- header section strats -->
+      <header class="header_section">
+        <div class="header_top">
+          <div class="container-fluid">
+            <div class="contact_nav">
+              <a href="https://wa.me/393314406060">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Contatti : +39 331 4406060
+                </span>
+              </a>
+              <a href="{% url 'about'%}">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  Email : lacasadigaribaldi@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="header_bottom">
+          <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container ">
+              <a class="navbar-brand" href="{% url 'home' %}">
+                <span>
+                  La Casa di Garibaldi
+                </span>
+              </a>
+
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class=""> </span>
+              </button>
+  
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'home' %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">Che Siamo</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'galeria'%}">Galleria</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact'%}">Contatti Noi</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+<!-- end header section -->
