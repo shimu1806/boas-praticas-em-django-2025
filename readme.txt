@@ -8,3 +8,11 @@ Curso boas praticas django
 
 - Criar Project com "." e nome "setup/config/main/sejalaoqfor"
 
+- Ao invés de escrever apenas o nome do app em setings, escrever o diretorio de apps dentro do app. Da seguinte forma:
+        INSTALLED_APPS = [
+        ...
+        ...
+        ...
+        'learnCastellinaEv1.apps.Learncastellinaev1Config',     <-- desse jeito
+        'learnCastellinaEv1',                                   <-- ao invés desse
+    ]

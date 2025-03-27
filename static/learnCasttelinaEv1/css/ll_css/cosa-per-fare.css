@@ -1,0 +1,32 @@
+.container-locais {
+    padding: 2rem;
+}
+
+.titulo-locais {
+    padding: 2rem;
+}
+
+.card {
+    height: 100%; /* Garante que o card ocupe toda a altura da coluna */
+    display: flex;
+    flex-direction: column; /* Alinha o conteúdo verticalmente */
+}
+
+/* Tamanho fixo para as imagens */
+.card-img-container img {
+    width: 100%; /* A imagem ocupa toda a largura do card */
+    height: 200px; /* Altura fixa para todas as imagens */
+    object-fit: cover; /* Mantém a proporção da imagem sem distorção */
+}
+
+/* Espaçamento interno do corpo do card */
+.card-body {
+    flex-grow: 1; /* O corpo do card cresce para preencher o espaço restante */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Botão "Saiba Mais" sempre na parte inferior */
+.card-body .btn {
+    margin-top: auto; /* Empurra o botão para o final do card */
+}

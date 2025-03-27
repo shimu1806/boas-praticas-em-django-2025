@@ -1,0 +1,43 @@
+{% extends "base-castellina.html" %}
+{% load static %}
+
+  <!-- local section -->
+
+
+  {% block content %}
+  <div class="container-locais">
+      <h1 class="titulo-locais">Locais Disponíveis</h1>
+      <div class="row">
+          {% for local in locais %}
+          <div class="col-md-4 mb-4">
+              <div class="card h-100 d-flex flex-column">
+                  <!-- Imagem -->
+                  <div class="card-img-container">
+                      {% if local.imagem %}
+                      <img src="{{ local.imagem.url }}" class="card-img-top img-fluid" alt="{{ local.nome }}">
+                      {% else %}
+                      <img src="{% static 'images/default.jpg' %}" class="card-img-top img-fluid" alt="Imagem Padrão">
+                      {% endif %}
+                  </div>
+  
+                  <!-- Conteúdo -->
+                  <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">{{ local.nome }}</h5>
+                      <p class="card-text"><strong>Categoria:</strong> {{ local.get_categoria_display }}</p>
+                      <p class="card-text">{{ local.descricao|truncatewords:20 }}</p>
+                      {% if local.link %}
+                      <a href="{{ local.link }}" target="_blank" class="btn btn-primary mt-auto">Saiba Mais</a>
+                      {% endif %}
+                  </div>
+              </div>
+          </div>
+          {% empty %}
+          <div class="col">
+              <p>Nenhum local disponível no momento.</p>
+          </div>
+          {% endfor %}
+      </div>
+  </div>
+  {% endblock %}
+
+  <!-- end local section -->

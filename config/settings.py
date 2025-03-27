@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'learnCastellinaEv1',
+    'learnCastellinaEv1.apps.Learncastellinaev1Config',
 ]
 
 MIDDLEWARE = [
@@ -124,10 +124,15 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, ('static')),
 ]
-
+STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+ALLOWED_HOSTS = ['192.168.159.104']
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
